@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Oceanside Typewriter';
+    src: url('fonts/Oceanside Typewriter.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Viola';
+    src: url('fonts/Viola.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Halimun';
+    src: url('fonts/Halimun-W7jn.ttf') format('truetype');
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(225%);
+    }
+    100% {
+        transform: translateX(-185%);
+    }
+}
+
+/* General page styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oceanside Typewriter';
+    background-image: url('images/asthetic-drawing-wallpaper.jpg');
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    background-position: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 100%;
+    cursor: url('images/Clouds--cursor--SweezyCursors_1.cur'), auto;
+    box-sizing: border-box;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.543);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    overflow-y: auto;
+    color: rgba(230, 196, 62, 0.762);
+}
+
+.sidebar h3 {
+    font-family: 'Viola';
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.sidebar-content img {
+    width: 250px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Oceanside Typewriter';
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Banner section */
+.banner {
+    background-image: url('images/anime-style-clouds (4).jpg');
+    background-size: 100%;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.banner h1 {
+    font-size: 2em;
+    font-family: 'Halimun';
+    text-align: center;
+    color: #d4b1f9;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    position: relative;
+}
+
+/* Portfolio Headings */
+h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #e6bbf8;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #15052ed3;
+    padding: 20px;
+    position: sticky;
+    top: 150px;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: rgba(230, 196, 62, 0.762);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    cursor: url('images/Clouds--pointer--SweezyCursors_2.cur'), pointer;
+}
+
+.navbar ul li a:hover {
+    background-color: #000000;
+    border-radius: 4px;
+}
+
+/* Portfolio section */
+.portfolio {
+    padding: 20px 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+/* Gallery styling */
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 350px;
+    margin: 0 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Video section */
+.video {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.video h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #e6bbf8;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Modal styling */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.pdf-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Space between each preview */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px;
+    margin-left: 50px; /* Align gallery with the left side as per your arrow */
+    margin-right: 20px; /* Add a small margin from the right edge */
+    max-width: calc(100vw - 260px - 20px); /* Prevent gallery from going off the right side */
+    justify-content: flex-start; /* Align previews to the start of the container */
+    align-items: center; /* Vertically center the previews */
+    scrollbar-width: thin; /* Modern browser support for a thin scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling for horizontal scroll */
+}
+
+.pdf-gallery::-webkit-scrollbar {
+    height: 8px; /* Set scrollbar height */
+}
+
+.pdf-gallery::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Light scrollbar thumb */
+    border-radius: 10px;
+}
+
+.pdf-gallery::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* Subtle track background */
+}
+
+.pdf-gallery .pdf-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto; /* Prevent resizing and maintain horizontal layout */
+    width: 150px; /* Set uniform size for all previews */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pdf-gallery .pdf-preview img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+.pdf-gallery .pdf-preview:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.pdf-gallery .pdf-preview p {
+    font-family: 'Viola';
+    font-size: 1.2em; /* Larger font size for better readability */
+    font-weight: bold;
+    color: #fff; /* Text color for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle text outline */
+}
+
+
+
+
+
+/* PDF Modal */
+.pdf-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+}
+
+.pdf-modal.hidden {
+    display: none;
+}
+
+.pdf-content {
+    width: 80%;
+    height: 80%;
+    border: none;
+}
+
+.pdf-modal .close {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    cursor: pointer;
+}

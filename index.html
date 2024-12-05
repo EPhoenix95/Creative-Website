@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Phoenix Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <h3>What you will find here</h3>
+            <img src="images/Portfolio Contents.jpg" alt="Large image" width="417" height="583">
+            <p>Welcome to my creative portfolio.</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Banner Section -->
+        <section class="banner">
+            <h1>Emily Phoenix . ݁₊ ⊹ . ݁˖ . ݁ Creative Portfolio</h1>
+        </section>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#portfolio-paper-ink">Artwork: paper & ink</a></li>
+                <li><a href="#portfolio-digital">Artwork: digital</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#video">Modding: Skyrim</a></li>
+                <li><a href="#video-2">Music: songwriting</a></li>
+            </ul>
+        </nav>
+
+        <!-- Portfolio Sections -->
+        <main>
+            <section class="portfolio" id="portfolio-paper-ink">
+                <h2>Artwork: paper & ink</h2>
+                <div class="gallery" id="art-gallery">
+                    <!-- Images will load here -->
+                </div>
+            </section>
+
+            <section class="portfolio" id="portfolio-digital">
+                <h2>Artwork: digital</h2>
+                <div class="gallery" id="art-gallery">
+                    <!-- Images will load here -->
+                </div>
+            </section>
+
+            <section class="portfolio" id="writing">
+                <h2>Writing</h2>
+                <!-- PDF Gallery for Writing -->
+                <div class="pdf-gallery">
+                    <!-- NEW: PDF Previews -->
+                    <div class="pdf-preview" data-pdf="path/to/sample1.pdf">
+                        <img src="images/sample1-preview.jpg" alt="Sample PDF 1">
+                        <p>Sample PDF 1</p>
+                    </div>
+                    <div class="pdf-preview" data-pdf="path/to/sample2.pdf">
+                        <img src="images/sample2-preview.jpg" alt="Sample PDF 2">
+                        <p>Sample PDF 2</p>
+                    </div>
+                    <div class="pdf-preview" data-pdf="path/to/sample3.pdf">
+                        <img src="images/sample3-preview.jpg" alt="Sample PDF 3">
+                        <p>Sample PDF 3</p>
+                    </div>
+                </div>
+
+                <!-- Modal for viewing PDFs -->
+                <div id="pdf-modal" class="pdf-modal hidden">
+                    <span class="close" id="close-pdf-modal">&times;</span>
+                    <iframe class="pdf-content" id="pdf-content"></iframe>
+                </div>
+            </section>
+
+            <!-- Video Showcase Section -->
+            <section class="video" id="video">
+                <h2>Modding: Skyrim</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="skyrim-mods.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+
+            <section class="video" id="video-2">
+                <h2>Music: songwriting</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="original-song.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+        </main>
+
+        <!-- Image Modal -->
+        <div id="modal" class="modal hidden">
+            <span class="close" id="close-modal">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
